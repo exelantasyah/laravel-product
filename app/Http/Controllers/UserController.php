@@ -39,7 +39,7 @@ class UserController extends Controller
     public function create(): View
     {
         return view('users.create', [
-            'roles' => Role::pluck('name')->get()
+            'roles' => Role::pluck('name')->all()
         ]);
     }
 
